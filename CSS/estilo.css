@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Dosis:wght@200;300;400&family=Lobster&family=Nanum+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&family=Ubuntu:ital@1&display=swap');
+
+
+:root {
+    --blue: #1C3987;
+    --light: lightskyblue;
+    --dosis: 'Dosis', sans-serif;
+
+}
+
+/* font-family: 'Carter One', cursive;
+font-family: 'Dosis', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin-left: 40px;
+    margin-right: 40px;
+    box-sizing: border-box;
+
+}
+
+.cabecalhocontainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center; */
+
+}
+
+.logotipo {
+    flex: 30%;
+}
+
+.navegacao {
+    flex: 70%;
+}
+
+.navegacao ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 30px;
+    padding-top: 100px;
+    padding-right: 30px;
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 500px;
+    padding-top: 100px;
+    gap: 100px; */
+
+}
+
+.navegacao ul li {
+    font-family: var(--dosis);
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.navegacao ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    background-color: var(--blue);
+    padding: 5px;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    color: white;
+
+
+
+}
+
+.navegacao ul li a:hover {
+    color: var(--light);
+
+}
+
+/* Formatação das Imagems Slides*/
+
+/* https://www.youtube.com/watch?v=0L81rND7AJY */
+
+.carrossel {
+    width: 1025px;
+    height: 683px;
+    outline: 3px solid black;
+    /* Igual ao Border */
+    /* margin: 50px auto; */
+
+
+    margin-top: 30px;
+    margin-left: 100px;
+
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    /* Oculta o que passou do primeiro slide */
+
+
+}
+
+.carrossel ul {
+    display: flex;
+    list-style: none;
+    width: 4100px;
+    /* Soma total do tamanho das imagens */
+    height: 683px;
+
+}
+
+.carrossel li {
+    position: relative;
+    left: -1025px;
+    /*Move a segunda imagem para dentro negativo*/
+    animation: slide 15s ease-out;
+    /* ease-out = começa ligeiro e depois acelera
+    slide é o nome da animação */
+
+
+}
+
+@keyframes slide {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    30% {
+        left: -1025px;
+    }
+
+    40% {
+        left: -1025px;
+    }
+
+    50% {
+        left: -2050px;
+    }
+
+    70% {
+        left: -3075px;
+    }
+
+    80% {
+        left: -3075;
+    }
+
+    90% {
+        left: 0px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+
+/* Formataçaão da Empresa */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.itens {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    text-align: center;
+    border: 5px solid var(--light);
+    border-radius: 25%;
+
+}
